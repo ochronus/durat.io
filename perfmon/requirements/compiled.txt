@@ -1,0 +1,13 @@
+# Choose your databases adapter
+#psycopg2
+#MySQL-python
+
+# for bcrypt passwords
+py-bcrypt
+
+
+django-userena==1.2.4
+django-extensions==1.2.2
+
+# Email sending. SES
+seacucumber==1.5.1

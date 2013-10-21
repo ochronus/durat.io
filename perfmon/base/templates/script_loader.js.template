@@ -1,0 +1,3 @@
+<script>var performator={site_id:"{{ site_hash }}"};(function(d,s){var js=d.createElement(s),sc=d.getElementsByTagName(s)[0];
+js.src="http://probe.durat.io/beacon.js"
+sc.parentNode.insertBefore(js,sc)})(document,"script")</script>

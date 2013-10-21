@@ -1,0 +1,22 @@
+{% extends "_layouts/base.html" %}
+
+{% block page_title %}Your Site - Home{% endblock %}
+{% block page_class %}home-page{% endblock %}
+{% block content %}
+    <div class="row">
+        <table class="table">
+        {% for site in sites %}
+            <tr>
+                <td>{{ site.name }}</td>
+                <td>{{ site.domain }}</td>
+                <td>{{ site.uuid }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+{% endblock %}
+{% block javascript %}
+  <script src="{{ STATIC_URL }}js/libs/bootstrap.min.js"></script>
+  <script src="{{ STATIC_URL }}js/plugins.js"></script>
+  <script src="{{ STATIC_URL }}js/landing.js"></script>
+{% endblock %}
