@@ -1,7 +1,6 @@
 """ Views for the base application """
 
 from django.shortcuts import render, redirect
-from django.template.loader import render_to_string
 from django.contrib.auth.decorators import login_required
 from .models import Site, SiteForm
 
@@ -12,10 +11,10 @@ def home(request):
     else:
         return render(request, 'base/home.html',)
 
-def get_code_for_site(site_id):
+def get_code_for_site(request, site_id):
     try:
         site = Site.objects.get(pk=site_id)
-        return render_to_string("script_loader.js.template", {'site_hash': site.uuid})
+        return render(request, "script_loader.js.template", {'site_hash': site.uuid})
     except Exception as e:
         print e
 
